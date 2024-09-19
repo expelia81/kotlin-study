@@ -3,6 +3,10 @@ package practice.collections
 fun main() {
     val map = mapOf("a" to "A", "b" to "B")
     println(map.toTheMoon("BoB"))
+    ArrayList<Int>().toTheMoon("hi")
+
+    var a : Int
+
 }
 
 

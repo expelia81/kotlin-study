@@ -18,6 +18,7 @@ fun main() {
     var alphabet = Array(26) { i -> 'a'.plus(i) };
 
     var sb = StringBuilder()
+
     for(i in alphabet) {
         var count = 0;
         for (name in list) {
@@ -32,6 +33,7 @@ fun main() {
     } else {
         bw.write(sb.toString())
     }
+
     bw.flush()
     br.close()
     bw.close()
