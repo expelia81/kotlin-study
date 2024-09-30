@@ -9,11 +9,21 @@ fun main() {
     val br: BufferedReader = BufferedReader(InputStreamReader(System.`in`))
     val bw: BufferedWriter = BufferedWriter(OutputStreamWriter(System.out))
 
-    var st= StringTokenizer(br.readLine(), " ")
+    var n = br.readLine().toInt()
+    var ball = 1
 
-    var n = st.nextToken().toLong()
-    var m = st.nextToken().toLong()
-    var k = st.nextToken().toLong()
+    for (i in 0..<  n){
+        var st= StringTokenizer(br.readLine(), " ")
+        var m = st.nextToken().toInt()
+        var k = st.nextToken().toInt()
+        if (m == ball) {
+            ball = k
+        } else if (k == ball) {
+            ball = m
+        }
+    }
+
+    println(ball)
 
 
     bw.flush()

@@ -54,6 +54,10 @@ fun main() {
     bw.close()
 }
 
+private fun Paper.isAllPlus():Boolean {
+    return this.zero==0 && this.minus==0
+}
+
 private class Paper(a: Int) {
     var minus =0
     var plus=0
@@ -62,9 +66,7 @@ private class Paper(a: Int) {
     fun isAllZero():Boolean {
         return minus==0 && plus==0
     }
-    fun isAllPlus():Boolean {
-        return zero==0 && minus==0
-    }
+
     fun isAllMinus(): Boolean {
         return plus==0 && zero==0
     }
