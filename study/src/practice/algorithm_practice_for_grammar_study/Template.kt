@@ -11,9 +11,9 @@ fun main() {
 
     var st= StringTokenizer(br.readLine(), " ")
 
-    var n = st.nextToken().toLong()
-    var m = st.nextToken().toLong()
-    var k = st.nextToken().toLong()
+    var n = st.nextToken().toInt()
+    var m = st.nextToken().toInt()
+    var k = st.nextToken().toInt()
 
 
     bw.flush()

@@ -33,7 +33,7 @@ fun main(){
 var n = 0
 var k = 0
 
-val queue : Queue<Int> by lazy {
+private val queue : Queue<Int> by lazy {
 //    println("lazy 호출됨! 큐 생성 완료!")
     LinkedList()
 }
