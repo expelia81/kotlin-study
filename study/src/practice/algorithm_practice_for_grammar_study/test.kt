@@ -1,8 +1,22 @@
 package practice.algorithm_practice_for_grammar_study
 
+import java.io.BufferedReader
+import java.io.BufferedWriter
+import java.io.InputStreamReader
+import java.io.OutputStreamWriter
+import java.util.*
+
 fun main() {
 
-    var tens = IntArray(11+1){i -> Math.pow(10.0,i.toDouble()).toInt()}
-    println(2531%tens[2]/tens[1])
-    println(2531%tens[3]/tens[2])
+    val br: BufferedReader = BufferedReader(InputStreamReader(System.`in`))
+    val bw: BufferedWriter = BufferedWriter(OutputStreamWriter(System.out))
+
+    println(".  .   .\n" +
+            "|  | _ | _. _ ._ _  _\n" +
+            "|/\\|(/.|(_.(_)[ | )(/.")
+
+
+    bw.flush()
+    br.close()
+    bw.close()
 }
