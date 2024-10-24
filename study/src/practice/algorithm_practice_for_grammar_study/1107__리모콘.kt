@@ -12,11 +12,13 @@ fun main() {
 
     var n = br.readLine().toInt()
     var m = br.readLine().toInt()
-    var st= StringTokenizer(br.readLine(), " ")
 
     var set = HashSet<Char>()
-    repeat (m) {
-        set.add(st.nextToken().get(0))
+    if (m>0) {
+        var st= StringTokenizer(br.readLine(), " ")
+        repeat (m) {
+            set.add(st.nextToken().get(0))
+        }
     }
 
     var now = 0
@@ -38,11 +40,10 @@ fun main() {
         result = n-100
     }
     if (check(n)) {
-        result = Math.min(result,n.toString().toInt())
+        result = Math.min(result,n.toString().length)
     }
 
     while (now < result) {
-        now++
         var high = n+now
         var low = n-now
         var hv = Int.MAX_VALUE
@@ -56,11 +57,13 @@ fun main() {
 
         if (hv < 1000000 || lv < 1000000) {
             result = Math.min(result,(Math.min(hv,lv)+now))
+//            println(result)
+//            println("${now} : ${result}")
             break
         }
+        now++
+
     }
-
-
     bw.write(result.toString())
     bw.flush()
     br.close()
