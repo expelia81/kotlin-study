@@ -1,25 +1,24 @@
 package practice.algorithm_practice_for_grammar_study
 
 import java.io.BufferedReader
-import java.io.BufferedWriter
 import java.io.InputStreamReader
-import java.io.OutputStreamWriter
-import java.util.*
+import java.util.StringTokenizer
 
 fun main() {
 
-    val br: BufferedReader = BufferedReader(InputStreamReader(System.`in`))
-    val bw: BufferedWriter = BufferedWriter(OutputStreamWriter(System.out))
+    var br = BufferedReader(InputStreamReader(System.`in`))
 
-    var n = br.readLine().toInt()
-    var result = 0
 
-    for (i in 1..n) {
-        result += i
+    var value = br.readLine().toInt()
+    while (value!=0) {
+        var result = 0
+        for (i in 1..value) {
+            result+=i
+        }
+        println(result)
+        value = br.readLine().toInt()
     }
-    println(result)
 
-    bw.flush()
     br.close()
-    bw.close()
+
 }
