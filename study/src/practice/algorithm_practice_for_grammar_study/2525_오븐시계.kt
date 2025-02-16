@@ -9,18 +9,26 @@ fun main() {
     val br: BufferedReader = BufferedReader(InputStreamReader(System.`in`))
     val bw: BufferedWriter = BufferedWriter(OutputStreamWriter(System.out))
 
-    var max = 0
-    var index = -1
+    var st = StringTokenizer(br.readLine())
 
-    for(i in 1..9) {
-        var n = br.readLine().toInt();
-        if (max < n) {
-            max = n
-            index = i
+    var hour = st.nextToken().toInt()
+    var min = st.nextToken().toInt()
+
+    var time = br.readLine().toInt()
+
+    while (time > 0) {
+        time--;
+        min++;
+        if (min==60) {
+            hour++;
+            min=0
+            if (hour==24) {
+                hour=0
+            }
         }
     }
+    bw.write("${hour} ${min}")
 
-    bw.write("$max\n$index")
     bw.flush()
     br.close()
     bw.close()

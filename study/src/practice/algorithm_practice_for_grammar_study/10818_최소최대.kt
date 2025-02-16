@@ -9,18 +9,20 @@ fun main() {
     val br: BufferedReader = BufferedReader(InputStreamReader(System.`in`))
     val bw: BufferedWriter = BufferedWriter(OutputStreamWriter(System.out))
 
-    var max = 0
-    var index = -1
+    val n = br.readLine().toInt()
 
-    for(i in 1..9) {
-        var n = br.readLine().toInt();
-        if (max < n) {
-            max = n
-            index = i
-        }
+    var st= StringTokenizer(br.readLine(), " ")
+    var min = Int.MAX_VALUE
+    var max = Int.MIN_VALUE
+    repeat(n) {
+        var temp = st.nextToken().toInt()
+        min = Math.min(min, temp)
+        max = Math.max(max, temp)
     }
 
-    bw.write("$max\n$index")
+    bw.write("$min $max")
+
+
     bw.flush()
     br.close()
     bw.close()
